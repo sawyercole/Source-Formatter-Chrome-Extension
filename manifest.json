@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "SPS Source Formatter",
-  "description": "This extension reformats the Seattle Schools webstie 'The Source'. It's completely unnofical so dont contact Seattle Schools if something is broken",
+  "description": "This extension reformats the Seattle Schools website \"The Source\" (https://ps.seattleschools.org/public/). It's completely unofficial so don't contact Seattle Schools if something is broken.",
   "version": "1.0",
 
   "browser_action": {

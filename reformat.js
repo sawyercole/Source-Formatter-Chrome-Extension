@@ -132,7 +132,27 @@ function reformatAssignmentsTitle(){
     var currentTitle = document.getElementsByTagName("h1")[0];
     currentTitle.parentNode.replaceChild(divWrapper, currentTitle);
     classInfoTable.parentNode.removeChild(classInfoTable);
-} catch (e) { }
+    } catch (e) { }
+}
+
+function recolorTableHeadings(){
+    try {
+    var thArray = document.getElementsByTagName("th");
+    for (var j = 0; j < thArray.length; j++) {
+        var th = thArray[j];
+        if(th.style.background == ""){
+            th.style.background = "#114890";
+            th.style.color = "white";
+            th.style.borderColor = "#114890";
+            try {
+            var children = th.childNodes;
+            for(var i = 0; i < children.length; i++){
+                children[i].style.color = "white";
+            }
+        } catch (e) { }
+        }
+    }
+    } catch (e) { }
 }
 
 function reformatGradesSummary(){
@@ -148,6 +168,7 @@ function reformatCourseGrade(){
 
 function reformatSource(){
     reformatHeader();
+    recolorTableHeadings();
     try {
         reformatGradesSummary();
     } catch (error) {}
